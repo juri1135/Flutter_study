@@ -1,0 +1,59 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    { 
+      "name":"Debug",
+      "type": "cppdbg",
+      "request": "launch"
+    },
+
+    {
+      "name": "Flutter",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/main.dart"
+    },
+    {
+      "name": "Dart",
+      "type": "dart",
+      "request": "launch",
+      "program": "bin/main.dart"
+    },
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "Invoke Lambda with API Gateway",
+      "invokeTarget": {
+        "target": "api",
+        "templatePath": "Template Location",
+        "logicalId": "Function Logical ID"
+      },
+      "api": {
+        "path": "Path",
+        "httpMethod": "Method",
+        "payload": {
+          "json": {}
+        }
+      }
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/toonflix",
+      "program": "c:/toonflix/linux/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
